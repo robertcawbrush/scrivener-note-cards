@@ -1,11 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import Proptypes from 'prop-types'
 
-const LoginComponent = () => {
+const LoginComponent = ({ navigation }) => {
 
     // init google
     const google = null
 
    // do something with this
+    // () => navigation.navigate('Home')
 
     return (
         <View style={styles.container}>
@@ -25,7 +27,7 @@ const styles = StyleSheet.create({
 });
 
 LoginComponent.proptypes = {
-
+navigation: Proptypes.object.isRequired,
 }
 
 export default LoginComponent
